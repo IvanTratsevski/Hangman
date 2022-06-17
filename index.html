@@ -15,11 +15,12 @@
         <div id="lettersField">
         </div>
         <div id="letterInputWrapper">
-            <form>
-                <input type="text" pattern='[А-Яа-яЁё]{1}' maxlength="1" placeholder="Введите одну русскую букву">
-                <input type="submit" value="Выбрать">
+            <form action="#">
+                <input type="text" id="userLetterField" pattern='[А-Яа-яЁё]{1}' maxlength="1" placeholder="Введите одну русскую букву">
+                <input type="submit" value="Выбрать" onclick="getUserLetter()">
             </form>
         </div>
     </div>
+    <script src="index.js"></script>
 </body>
 </html>
