@@ -14,3 +14,10 @@ function createSpaceForLetters(word){
         lettersField.append(letterWrapper);
     }
 }
+function compareLetter(currentLetter,userLetter){
+    if(currentLetter.toLowerCase() === userLetter.toLowerCase()){
+        return true;
+    } else {
+        return false;
+    }
+}
