@@ -6,12 +6,9 @@ function getUserLetter(){
 function splitWordToLetters(wordToSplit){
     return wordToSplit.split('');
 }
-function createSpaceForLetters(word){
-    for(let i=0; i < word.length;i++){
-        let letterWrapper = document.createElement('div');
-        letterWrapper.className = `letterWrapper ${word[i]}`;
-        letterWrapper.textContent = '_';
-        lettersField.append(letterWrapper);
+function writeSpacesForLetters(word){
+    for(let i=0;i<word.length;i++){
+        createOneLetterSpace(lettersField);
     }
 }
 function compareLetters(currentLetter,userLetter){
