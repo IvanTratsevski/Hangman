@@ -34,3 +34,4 @@ function showTrueLetters(positions, userLetter){
     positions.forEach(function(item){
         unknownLetters[item].textContent = userLetter;
     });
+}
