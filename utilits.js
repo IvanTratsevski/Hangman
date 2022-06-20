@@ -26,3 +26,12 @@ function getPostitionOfTrueLetters(word,userLetter){
     });
     return positions;
 }
+let word = splitWordToLetters('apple');
+writeSpacesForLetters(word);
+function showTrueLetters(positions, userLetter){
+    let unknownLetters = document.getElementsByClassName('unknownLetter');
+    positions.forEach(function(item){
+        unknownLetters[item].textContent = userLetter;
+    });
+}
+showTrueLetters(getPostitionOfTrueLetters(word,'l'),'l');
