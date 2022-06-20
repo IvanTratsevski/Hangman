@@ -1,4 +1,5 @@
 import {lettersField} from './constants.js';
+import {createOneLetterSpace} from './domcomponents.js';
 function getUserLetter(){
     const userLetter = document.getElementById("userLetterField").value;
     return userLetter;
