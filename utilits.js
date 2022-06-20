@@ -18,3 +18,10 @@ function compareLetters(currentLetter,userLetter){
         return false;
     }
 }
+function getPostitionOfTrueLetters(word,userLetter){
+    let positions = [];
+    word.forEach(function(item, index){
+        compareLetters(item,userLetter) ? positions.push(index) : null;
+    });
+    return positions;
+}
