@@ -12,3 +12,10 @@ function writeSpacesForLetters(word){
         createOneLetterSpace(lettersField);
     }
 }
+function compareLetters(currentLetter,userLetter){
+    if(currentLetter.toLowerCase() === userLetter.toLowerCase()){
+        return true;
+    } else {
+        return false;
+    }
+}
