@@ -1,6 +1,8 @@
-import {lettersField} from './constants.js';
+import {lettersField,words} from './constants.js';
 import {createOneLetterSpace} from './domcomponents.js';
-
+function getRandomWord(words){
+    return words[Math.round(Math.random()*(words.length-1))];
+}
 function getUserLetter(){
     const userLetter = document.getElementById("userLetterField").value;
     return userLetter;
