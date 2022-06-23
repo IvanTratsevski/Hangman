@@ -1,0 +1,1 @@
+let countOfTries = 3;

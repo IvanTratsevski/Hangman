@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="index.css">
     <title>Hangman</title>
 </head>
+
 <body>
     <div id="gameWrapper">
         <div id="imageWrapper">
@@ -16,11 +18,22 @@
         </div>
         <div id="letterInputWrapper">
             <form action="#">
-                <input type="text" id="userLetterField" pattern='[А-Яа-яЁё]{1}' maxlength="1" placeholder="Введите одну русскую букву">
+                <input type="text" id="userLetterField" pattern='[А-Яа-яЁё]{1}' maxlength="1"
+                    placeholder="Введите одну русскую букву">
                 <input type="submit" value="Выбрать" onclick="getUserLetter()">
             </form>
+        </div>
+        <div id='popup' class="popup">
+            <div class="popup__body">
+                <div class="popup__content">
+                    <a href="#" class="popup__close">X</a>
+                    <div class="popup__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, molestiae!
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <script src="index.js"></script>
 </body>
+
 </html>
