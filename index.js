@@ -5,6 +5,7 @@ function startTheGame() {
    const secretWord = getRandomWord(words);
    const lettersOfSecretWord = splitWordToLetters(secretWord);
    writeSpacesForLetters(lettersOfSecretWord);
+   const text=document.getElementsByClassName('popup__text');
    submitButton.onclick = function() {
       let userLetter = getUserLetter();
       if(getPostitionOfTrueLetters(lettersOfSecretWord,userLetter).length !==0){
@@ -15,9 +16,13 @@ function startTheGame() {
          changeImageOfMan(deathScore,images);
       }
       if(deathScore === 3){
-         alert("proigrish");
+         popup.style.opacity = "1";
+         popup.style.visibility = "visible";
+         text[0].innerText = 'К сожалению, попытки кончились! Персонажа повесили';
       } else if (isVictory()){
-         alert("pobeda");
+         popup.style.opacity="1";
+         popup.style.visibility="visible";
+         text[0].textContent='Поздравляем! Жизнь персонажа спасена! Вы молодец!';
       }
    };
 }
