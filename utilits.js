@@ -35,3 +35,17 @@ function showTrueLetters(positions, userLetter) {
         unknownLetters[item].textContent = userLetter;
     });
 }
+function changeImageOfMan(deathScore,images){
+    const imageOfMan = document.getElementById('imageOfMan');
+    imageOfMan.src = images[deathScore]+'.png';
+}
+function isVictory(){
+    const lettersSpaces = document.getElementsByClassName('unknownLetter');
+    function isThereNoSpaces(el,index,arr){
+        if(el.textContent !== "_"){
+            return true;
+        }
+    }
+    return lettersSpaces.every(isThereNoSpaces);
+}
+export {getRandomWord,splitWordToLetters,isVictory,getUserLetter,compareLetters}
