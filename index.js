@@ -1,1 +1,5 @@
-let countOfTries = 3;
+
+function startTheGame() {
+   let countOfTries = 3;
+
+}
