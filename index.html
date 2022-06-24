@@ -17,10 +17,10 @@
         <div id="lettersField">
         </div>
         <div id="letterInputWrapper">
-            <form action="#">
+            <form>
                 <input type="text" id="userLetterField" pattern='[А-Яа-яЁё]{1}' maxlength="1"
                     placeholder="Введите одну русскую букву">
-                <input type="submit" value="Выбрать" onclick="getUserLetter()">
+                <input type="submit" value="Выбрать" id="submitLetterBtn">
             </form>
         </div>
         <div id='popup' class="popup">
@@ -33,7 +33,7 @@
             </div>
         </div>
     </div>
-    <script src="index.js"></script>
+    <script src="index.js" type="module"></script>
 </body>
 
 </html>
