@@ -1,4 +1,4 @@
-import { lettersField, words } from './constants.js';
+import { lettersField} from './constants.js';
 import { createOneLetterSpace } from './domcomponents.js';
 function getRandomWord(words) {
     return words[Math.round(Math.random() * (words.length - 1))];
@@ -37,10 +37,10 @@ function showTrueLetters(positions, userLetter) {
 }
 function changeImageOfMan(deathScore,images){
     const imageOfMan = document.getElementById('imageOfMan');
-    imageOfMan.src = images[deathScore]+'.png';
+    imageOfMan.src = 'img/' + images[deathScore]+'.png';
 }
 function isVictory(){
-    const lettersSpaces = document.getElementsByClassName('unknownLetter');
+    const lettersSpaces = [...document.getElementsByClassName('unknownLetter')];
     function isThereNoSpaces(el,index,arr){
         if(el.textContent !== "_"){
             return true;
@@ -48,4 +48,4 @@ function isVictory(){
     }
     return lettersSpaces.every(isThereNoSpaces);
 }
-export {getRandomWord,splitWordToLetters,isVictory,getUserLetter,compareLetters}
+export {getRandomWord,splitWordToLetters,isVictory,getUserLetter,getPostitionOfTrueLetters,writeSpacesForLetters,showTrueLetters,changeImageOfMan}
