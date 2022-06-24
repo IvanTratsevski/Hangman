@@ -10,8 +10,8 @@ function startTheGame() {
       if(getPostitionOfTrueLetters(lettersOfSecretWord,userLetter).length !==0){
          showTrueLetters(getPostitionOfTrueLetters(lettersOfSecretWord,userLetter),userLetter);
       } else {
-         console.log('FFF');
          deathScore++;
+         console.log('FFF');
          changeImageOfMan(deathScore,images);
       }
       if(deathScore === 3){
