@@ -12,7 +12,6 @@ function startTheGame() {
          showTrueLetters(getPostitionOfTrueLetters(lettersOfSecretWord,userLetter),userLetter);
       } else {
          deathScore++;
-         console.log('FFF');
          changeImageOfMan(deathScore,images);
       }
       if(deathScore === 3){
