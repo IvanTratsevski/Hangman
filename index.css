@@ -9,15 +9,13 @@
 #gameWrapper {
     width: 100%;
     height: 100vh;
+    margin-top: -100px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-#lettersField {
-    height: 60px;
-    margin: 20px 0 20px 0;
-}
+
 #lettersField > * {
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     margin: 15px;
@@ -72,4 +70,16 @@
     margin-right: -50%;
     transform: translate(-50%, -50%);
     font-size: 30px;
+}
+
+input[type=text]{
+  margin: 50px;
+  padding: 15px;
+  font-size: 30px;
+  width: 60px;
+  border: 2px solid black;
+}
+
+input[type=submit]{
+font-size: 25px;
 }
