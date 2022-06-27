@@ -37,16 +37,14 @@ function changeImageOfMan(deathScore,images){
 }
 function isVictory(){
     const lettersSpaces = [...document.getElementsByClassName('unknownLetter')];
+    return lettersSpaces.every((el) => el.textContent !== "_");
 }
 function showPopup(string){
-     const text=document.getElementsByClassName('popup__text');
-     const popup=document.getElementsByClassName('popup');
-    popup[0].style.opacity = "1";
-    popup[0].style.visibility = "visible";
-    text[0].textContent = string;
-}
-
-    return lettersSpaces.every((el) => el.textContent !== "_");
+    const text=document.getElementsByClassName('popup__text');
+    const popup=document.getElementsByClassName('popup');
+   popup[0].style.opacity = "1";
+   popup[0].style.visibility = "visible";
+   text[0].textContent = string;
 }
 export {
     getRandomWord,

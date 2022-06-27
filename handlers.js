@@ -1,4 +1,5 @@
-import {getUserLetter,getPostitionOfTrueLetters,showTrueLetters, changeImageOfMan,isVictory} from './utilits.js';
+import {getUserLetter,getPostitionOfTrueLetters,showTrueLetters, changeImageOfMan,isVictory,showPopup} from './utilits.js';
+
 export function letterSubmitHandler(lettersOfSecretWord, deathScore, images){
     let userLetter = getUserLetter();
     document.getElementById("userLetterField").value = "";
@@ -9,9 +10,9 @@ export function letterSubmitHandler(lettersOfSecretWord, deathScore, images){
         changeImageOfMan(deathScore,images);
     }
     if(deathScore === 3){
-        //loss
+        showPopup('Вы проиграли');
     } else if (isVictory()){
-        //win
+        showPopup('Вы победили');
     }
     return deathScore;
 }
