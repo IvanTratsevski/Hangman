@@ -48,4 +48,23 @@ function isVictory(){
     }
     return lettersSpaces.every(isThereNoSpaces);
 }
-export {getRandomWord,splitWordToLetters,isVictory,getUserLetter,getPostitionOfTrueLetters,writeSpacesForLetters,showTrueLetters,changeImageOfMan}
+
+function showPopup(string){
+     const text=document.getElementsByClassName('popup__text');
+     const popup=document.getElementsByClassName('popup');
+    popup[0].style.opacity = "1";
+    popup[0].style.visibility = "visible";
+    text[0].textContent = string;
+}
+
+export {
+    getRandomWord,
+    splitWordToLetters,
+    isVictory,
+    getUserLetter,
+    getPostitionOfTrueLetters,
+    writeSpacesForLetters,
+    showTrueLetters,
+    changeImageOfMan,
+    showPopup
+}
