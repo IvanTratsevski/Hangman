@@ -11,21 +11,17 @@ function splitWordToLetters(wordToSplit) {
     return wordToSplit.split('');
 }
 function writeSpacesForLetters(word) {
-    for (let i = 0; i < word.length; i++) {
-        createOneLetterSpace(lettersField);
-    }
+    word.forEach((element) => createOneLetterSpace(lettersField));
 }
 function compareLetters(currentLetter, userLetter) {
-    if (currentLetter.toLowerCase() === userLetter.toLowerCase()) {
-        return true;
-    } else {
-        return false;
-    }
+    return currentLetter.toLowerCase() === userLetter.toLowerCase();
 }
 function getPostitionOfTrueLetters(word, userLetter) {
     let positions = [];
     word.forEach(function (item, index) {
-        compareLetters(item, userLetter) ? positions.push(index) : null;
+        if(compareLetters(item, userLetter)){
+            positions.push(index)
+        }
     });
     return positions;
 }
@@ -41,11 +37,15 @@ function changeImageOfMan(deathScore,images){
 }
 function isVictory(){
     const lettersSpaces = [...document.getElementsByClassName('unknownLetter')];
-    function isThereNoSpaces(el,index,arr){
-        if(el.textContent !== "_"){
-            return true;
-        }
-    }
-    return lettersSpaces.every(isThereNoSpaces);
+    return lettersSpaces.every((el) => el.textContent !== "_");
 }
-export {getRandomWord,splitWordToLetters,isVictory,getUserLetter,getPostitionOfTrueLetters,writeSpacesForLetters,showTrueLetters,changeImageOfMan}
+export {
+    getRandomWord,
+    splitWordToLetters,
+    isVictory,
+    getUserLetter,
+    getPostitionOfTrueLetters,
+    writeSpacesForLetters,
+    showTrueLetters,
+    changeImageOfMan
+};
