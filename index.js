@@ -1,4 +1,4 @@
-import {getRandomWord, splitWordToLetters, writeSpacesForLetters,showPopup} from './utilits.js';
+import {getRandomWord, splitWordToLetters, writeSpacesForLetters} from './utilits.js';
 import {words,submitButton,images,popBtnClose} from './constants.js';
 import {letterSubmitHandler} from './handlers.js'
 function startTheGame() {
